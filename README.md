@@ -5,7 +5,7 @@ This project is an AI-powered content recommender system that provides personali
 
 | Recommendation example |  State graph |
 |------------|-------------|
-| ![Input](Examples/Recommender_recommendations.png) | ![Output](Examples/Recommender_get_states.png) |
+| ![Input](Examples/Recommender_recommendations.png) | ![Output](Agents_flowchart.png) |
 
 
 
