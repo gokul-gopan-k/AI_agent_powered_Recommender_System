@@ -1,8 +1,13 @@
 # AI-Powered Content Recommender
 
-Overview
-
 This project is an AI-powered content recommender system that provides personalized recommendations for books and movies based on user preferences. It utilizes FastAPI for the backend, Supabase as the database, LangChain and LangGraph for AI-based workflow management, and Streamlit for the frontend UI.
+
+
+| Recommendation example |  State graph |
+|------------|-------------|
+| ![Input](Examples/Recommender_recommendations.png) | ![Output](Examples/Recommender_get_states.png) |
+
+
 
 ## Features
 
