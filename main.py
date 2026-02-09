@@ -167,18 +167,7 @@ class RecommendationWorkflow:
         except Exception as e:
             logging.error(f"Error in retrieval agent: {e}")
         return state
-    
-    def filtering_agent(self, state):
-        """Filter retrieved items based on user preferences."""
-        user_prefs = state.get("user_preferences", "")
-        system_prompt = """You are a helpful assistant that filters recommendations based on user preferences.
-    Return only the recommendations that closely match the user's expressed interests.
-    If no recommendations match the user preferences, return "No recommendations found".
-    """
-        formatted_items = "\n".join([f"Title: {item['title']}, Author: {item['author']}, Director: {item['director']}, Genre: {item['genre']}" for item in state["retrieved_items"]])
-        state["filtered_recommendations"] = self.llm.get_response(system_prompt, f"User preferences: {user_prefs}\nItems:\n{formatted_items}")
-        print("filtered_recommendations",state["filtered_recommendations"])
-        return state
+
     
     def filtering_agent(self, state):
         """Filter retrieved items based on user preferences."""
